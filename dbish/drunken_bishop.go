@@ -1,4 +1,4 @@
-package main
+package dbish
 
 import "strings"
 
@@ -92,15 +92,15 @@ func (f *Fingerprint) applyMappings() {
 func (f *Fingerprint) String() string {
 	var sb strings.Builder
 
-	sb.WriteString("+----------------+")
+	sb.WriteString("+----------------+\n")
 	for _, row := range f.image {
 		sb.WriteRune('|')
 		for _, c := range row {
 			sb.WriteRune(c)
 		}
-		sb.WriteRune('|')
+		sb.WriteString("|\n")
 	}
-	sb.WriteString("+----------------+")
+	sb.WriteString("+----------------+\n")
 
 	return sb.String()
 }
