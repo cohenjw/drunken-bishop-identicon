@@ -47,7 +47,7 @@ func (f *Fingerprint) genFingerprint(hash []byte) {
 	f[y][x] = 16
 }
 
-// clampWithinBounds clamps  `x` and `y` to be within
+// clampWithinBounds clamps `x` and `y` to be within
 // the bounds of the indices of the image
 // (defined by the `width` and `height` constants).
 func clampWithinBounds(x, y int) (int, int) {
